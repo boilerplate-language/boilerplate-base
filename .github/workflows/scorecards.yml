@@ -1,12 +1,13 @@
 name: Supply Chain Security Scan
 
 on:
-  workflow_dispatch:
+  branch_protection_rule:
   push:
     branches: ["main"] # Scorecard support only default branch
-  branch_protection_rule:
   schedule:
     - cron: "50 6 * * 6"
+  workflow_call:
+  workflow_dispatch:
 
 permissions: read-all
 

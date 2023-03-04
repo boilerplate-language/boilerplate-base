@@ -2,6 +2,8 @@ name: Auto PR Review
 
 on:
   pull_request:
+  workflow_call:
+  workflow_dispatch: # for debug
 
 permissions: read-all
 

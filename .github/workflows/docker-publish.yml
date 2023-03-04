@@ -1,10 +1,11 @@
 name: Docker Publish
 
 on:
-  workflow_dispatch: # for debug
   push:
     tags:
       - v*.*.*
+  workflow_call:
+  workflow_dispatch: # for debug
 
 permissions: read-all
 

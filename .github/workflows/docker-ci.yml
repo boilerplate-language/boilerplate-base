@@ -1,12 +1,13 @@
 name: Docker CI
 
 on:
-  workflow_dispatch:
+  pull_request:
   push:
     branches: [main]
-  pull_request:
   schedule:
     - cron: "0 15 * * 0"
+  workflow_call:
+  workflow_dispatch: # for debug
 
 permissions: read-all
 
