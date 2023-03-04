@@ -15,8 +15,8 @@ jobs:
   analyze:
     runs-on: ubuntu-latest
     permissions:
-      security-events: write
-      id-token: write # Used to receive a badge. (Upcoming feature)
+      security-events: read
+      id-token: read # Used to receive a badge. (Upcoming feature)
       contents: read # Needs for private repositories.
       actions: read # Needs for private repositories.
     steps:
